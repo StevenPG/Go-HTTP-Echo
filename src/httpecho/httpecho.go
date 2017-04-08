@@ -15,7 +15,7 @@ var GETinfoPattern = "/info/get"
 var DELETEinfoPattern = "/info/delete"
 var resetPattern = "/reset"
 
-var localhostPortConfig = "localhost:8000"
+var localhostPortConfig = "0.0.0.0:8000"
 
 func handleIncomingRequest(w http.ResponseWriter, r *http.Request) {
 	// Build folder structure if non-existing
@@ -51,12 +51,12 @@ func main() {
 
 	// Serve POST files
 	go func(){
-		panic(http.ListenAndServe("localhost:8001", http.FileServer(http.Dir("./POST"))))
+		panic(http.ListenAndServe("0.0.0.0:8001", http.FileServer(http.Dir("./POST"))))
 	}()
 
 	// Serve PUT files
 	go func(){
-		panic(http.ListenAndServe("localhost:8002", http.FileServer(http.Dir("./PUT"))))
+		panic(http.ListenAndServe("0.0.0.0:8002", http.FileServer(http.Dir("./PUT"))))
 	}()
 
 	// Serve HTTP 
