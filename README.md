@@ -10,12 +10,18 @@ However, services to retrieve and use the JSON/XML have not begun development. T
 
 This project seeks to create an easy lightweight location where alerting applications (and any others) can send JSON requests for easy review by testers.
 
-host:8000/reset - Reset files on server
-host:8000/info/get - Show all GET requests since last reset
-host:8000/info/delete - Show all DELETE requests since last reset
-host:8001 - Show all POST requests since last reset
-host:8002 - Show all PUT requests since last reset
+### EndPoints
+- host:8000/reset - Reset files on server
 
+- host:8000/info/get - Show all GET requests since last reset
+
+- host:8000/info/delete - Show all DELETE requests since last reset
+
+- host:8001 - Show all POST requests since last reset
+
+- host:8002 - Show all PUT requests since last reset
+
+### Application
 By using Golang's asynchronous features and its built in web-server, this application is structured in the following manner:
 1. Request comes in
 2. Request is written to a file and catalogued on a page of recent requests
