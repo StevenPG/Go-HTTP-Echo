@@ -12,8 +12,6 @@ import (
 
 var requestPattern = "/request"
 var GETinfoPattern = "/info/get"
-var POSTinfoPattern = "/post"
-var PUTinfoPattern = "/info/put"
 var DELETEinfoPattern = "/info/delete"
 var resetPattern = "/reset"
 
